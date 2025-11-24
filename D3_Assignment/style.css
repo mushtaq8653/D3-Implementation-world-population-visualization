@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.controls {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 5px solid #3498db;
+}
+
+.country-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.country-selection label {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #e9ecef;
+    font-weight: 600;
+}
+
+.country-selection label:hover {
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.country-selection input {
+    margin-right: 12px;
+    transform: scale(1.3);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#selectAll { background: #27ae60; color: white; }
+#clearAll { background: #e74c3c; color: white; }
+#resetView { background: #f39c12; color: white; }
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.instructions {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #2196f3;
+}
+
+#chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+    border: 2px solid #e9ecef;
+}
+
+#population-chart {
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    pointer-events: none;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 2px solid #3498db;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.axis text {
+    font-size: 12px;
+    fill: #7f8c8d;
+}
+
+.axis path,
+.axis line {
+    stroke: #bdc3c7;
+    shape-rendering: crispEdges;
+}
+
+.grid line {
+    stroke: #ecf0f1;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.bar {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    stroke: #2c3e50;
+    stroke-width: 2px;
+}
+
+.legend {
+    cursor: pointer;
+}
+
+.legend-item:hover {
+    opacity: 0.7;
+}

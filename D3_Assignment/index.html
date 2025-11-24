@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Population Trends - D3.js Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 World Population Trends (1960-2022) - Bar Chart</h1>
+        
+        <div class="controls">
+            <h2>Select Countries:</h2>
+            <div class="country-selection">
+    <label class="country-label">
+        <input type="checkbox" class="country-checkbox" value="China" checked>
+        <span style="font-weight: bold; color: #de2910;">🇨🇳 China</span>
+    </label>
+    <label class="country-label">
+        <input type="checkbox" class="country-checkbox" value="India" checked>
+        <span style="font-weight: bold; color: #004ba0;">🇮🇳 India</span>
+    </label>
+    <label class="country-label">
+        <input type="checkbox" class="country-checkbox" value="United States" checked>
+        <span style="font-weight: bold; color: #3c3b6e;">🇺🇸 United States</span>
+    </label>
+    <label class="country-label">
+        <input type="checkbox" class="country-checkbox" value="Indonesia" checked>
+        <span style="font-weight: bold; color: #ff6900;">🇮🇩 Indonesia</span>
+    </label>
+</div>
+            
+            <div class="button-group">
+                <button id="selectAll">✅ Select All</button>
+                <button id="clearAll">❌ Clear All</button>
+                <button id="resetView">🔄 Reset View</button>
+            </div>
+            
+            <div class="instructions">
+                <strong>🎯 Interactive Features:</strong>
+                • Hover over bars to see exact values • Click legend to show/hide countries • Animated transitions
+            </div>
+        </div>
+
+        <div id="chart-container">
+            <svg id="population-chart"></svg>
+        </div>
+        
+        <div id="tooltip" class="tooltip"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
